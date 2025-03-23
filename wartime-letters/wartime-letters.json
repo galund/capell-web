@@ -1,0 +1,11 @@
+{
+    "layout": "letter.html",
+    "eleventyComputed": {
+        "date_with_correspondents": "{{ date|date: '%Y-%m-%d' }} {{ from }}-{{ to }}",
+        "short_title": "{{ short_title | default: date_with_correspondents }}",
+        "title": "{{ short_title }} - Capell war-time letters"
+    },
+    "tags": [
+        "wartime-letters"
+    ]
+}
