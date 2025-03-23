@@ -2,11 +2,10 @@ body {
     font-family: "Cormorant Garamond", serif;
     font-optical-sizing: auto;
     max-width: 50em;
-    line-height: 1.6em;
-
+    line-height: 1.8em;
+    font-size: large;
 }
 .nav-item {
-    font-size: large;
     float: left;
     margin-right: 2em;
 }
