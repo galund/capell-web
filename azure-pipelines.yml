@@ -10,18 +10,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: npx eleventy
-  displayName: 'Eleventy build'
-- task: AzureFileCopy@6
-  inputs:
-    SourcePath: '_site'
-    azureSubscription: 'Free Trial(b3fd839c-1ed7-454d-b72b-9a79a09581f3)'
-    Destination: 'AzureBlob'
-    storage: 'capellwebprod'
-    ContainerName: '$web'
-    CleanTargetBeforeCopy: true
+  - script: npx eleventy
+    displayName: 'Eleventy build'
+  - task: AzureFileCopy@6
+    inputs:
+      SourcePath: '_site'
+      azureSubscription: 'Free Trial(b3fd839c-1ed7-454d-b72b-9a79a09581f3)'
+      Destination: 'AzureBlob'
+      storage: 'capellwebprod'
+      ContainerName: '$web'
+      CleanTargetBeforeCopy: true
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+      echo See https://aka.ms/yaml
+    displayName: 'Run a multi-line script'
